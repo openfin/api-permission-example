@@ -1,0 +1,22 @@
+{  
+    "applicationSettings": {
+      "MyPolicies": {
+        "urls": ["http://localhost:8080/app.json"],
+        "permissions": {
+          "System": {
+            "launchExternalProcess": true
+          },
+          "Window": {
+            "executeJavaScript": false
+          }
+        }
+      },
+      "default": {
+        "permissions": {
+          "System": {
+            "launchExternalProcess": false
+          }
+        }
+      }
+    }
+  }

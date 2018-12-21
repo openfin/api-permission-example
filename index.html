@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>OpenFin API Permission Example</title>
+<script type="text/javascript">
+    // To toggle permission for launchExternalProcess, modify the following
+    // settign in permissions.json
+    //    "System": {
+    //    "launchExternalProcess": true
+    //    },
+    fin.desktop.System.launchExternalProcess({path:'notepad'}, 
+            data => console.log(data), 
+            err => console.error(err));
+
+    // To toggle permission for executeJavaScript, modify the following
+    // settign in permissions.json
+    //    "Window": {
+    //    "executeJavaScript": true
+    //    },
+    fin.desktop.Window.getCurrent().executeJavaScript('console.log("invoked by OpenFin API")',
+        data => console.log(data),
+        err => console.error(err));
+</script>
+</head>
+<body>
+    <div>
+        <h1>
+                Example of configuring permissions for OpenFin APIs and URL navigations.
+        </h1>
+    </div>
+</body>
+</html>
