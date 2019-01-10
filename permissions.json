@@ -3,11 +3,49 @@
       "MyPolicies": {
         "urls": ["http://localhost:8080/app.json"],
         "permissions": {
+          "Application": {
+            "setShortcuts": false
+          },
           "System": {
-            "launchExternalProcess": true
+            "clearCache": false,
+            "deleteCacheOnExit": false,
+            "downloadAsset": false,
+            "downloadPreloadScripts": false,
+            "downloadRuntime": false,
+            "exit": false,
+            "getCommandLineArguments": false,
+            "getConfig": false,
+            "getCookies": false,
+            "getDeviceId": false,
+            "getDeviceUserId": false,
+            "getEnvironmentVariable": false,
+            "getHostSpecs": false,
+            "getLog": false,
+            "getLogList": false,
+            "getMousePosition": false,
+            "getProcessList": false,
+            "getRemoteConfig": false,
+            "launchExternalProcess": false,
+            "monitorExternalProcess": false,
+            "readRegistryValue": false,
+            "releaseExternalProcess": false,
+            "terminateExternalProcess": false,
+            "setClipboard": false,
+            "Clipboard": {
+                "clipboardAvailableFormats": false,
+                "clipboardReadHtml": false,
+                "clipboardReadRtf": false,
+                "clipboardReadText": false,
+                "clipboardWrite": false,
+                "clipboardWriteHtml": false,
+                "clipboardWriteRtf": false,
+                "clipboardWriteText": false
+            }
           },
           "Window": {
-            "executeJavaScript": false
+            "executeJavaScript": false,
+            "getNativeId": false,
+            "getSnapshot": false
           }
         }
       },
