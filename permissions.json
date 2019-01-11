@@ -22,6 +22,7 @@
             "getHostSpecs": false,
             "getLog": false,
             "getLogList": false,
+            "getMonitorInfo": false,
             "getMousePosition": false,
             "getProcessList": false,
             "getRemoteConfig": false,
