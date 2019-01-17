@@ -3,9 +3,9 @@ Example of setting OpenFin API permissions
 
 Example security policies for OpenFin API are defined in permissions.json.  To enable the policies, 
 
-1. Create the following key in Registry:
+1. Create the following key in Registry (as String value):
 
-HKEY_CURRENT_USER\Software\OpenFin\RVM\Settings\DesktopOwnerSettings="http://localhost:8080/permissions.json"
+HKEY_CURRENT_USER\Software\OpenFin\RVM\Settings\DesktopOwnerSettings=http://localhost:8080/permissions.json
 
 2. Add " --enable-strict-api-permissions " to runtime->arguments in app manifest.
 
