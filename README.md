@@ -27,3 +27,13 @@ To run the example
     OpenFinRVM.exe --config=http://localhost:8080/app.json
 3. open devtools to check result of launchExternalProcess and executeJavaScript
 4. try window.open with URls that are listed in whitelist and blacklist    
+
+## License
+MIT
+
+The code in this repository is covered by the included license.
+
+However, if you run this code, it may call on the OpenFin RVM or OpenFin Runtime, which are covered by OpenFin’s Developer, Community, and Enterprise licenses. You can learn more about OpenFin licensing at the links listed below or just email us at support@openfin.co with questions.
+
+https://openfin.co/developer-agreement/ <br/>
+https://openfin.co/licensing/
