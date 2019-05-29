@@ -10,7 +10,7 @@
     //    },
     fin.desktop.System.launchExternalProcess({path:'notepad'}, 
             data => console.log(data), 
-            err => console.error(err));
+            err => console.error('launchExternalProcess', err));
 
     // To toggle permission for executeJavaScript, modify the following
     // settign in permissions.json
@@ -19,7 +19,43 @@
     //    },
     fin.desktop.Window.getCurrent().executeJavaScript('console.log("invoked by OpenFin API")',
         data => console.log(data),
-        err => console.error(err));
+        err => console.error('executeJavaScript', err));
+
+    function createChildWindow(permission) {
+        const winOption = {
+            name:'child' + Math.random(),
+            defaultWidth: 600,
+            defaultHeight: 600,
+            url: 'http://localhost:8080/index.html',
+            frame: true,
+            autoShow: true,
+            permissions: {
+                System: {
+                    launchExternalProcess: permission
+                }
+            }
+        };
+        fin.Window.create(winOption);
+    }
+
+    function createChildApp(permission) {
+        const option = {
+            uuid:'child' + Math.random(),
+            name:'child',
+            defaultWidth: 600,
+            defaultHeight: 600,
+            url: 'http://localhost:8080/index.html',
+            frame: true,
+            autoShow: true,
+            permissions: {
+                System: {
+                    launchExternalProcess: permission
+                }
+            }
+        };
+        fin.Application.start(option);
+    }
+
 </script>
 </head>
 <body>
@@ -27,6 +63,18 @@
         <h1>
                 Example of configuring permissions for OpenFin APIs and URL navigations.
         </h1>
+    </div>
+    <div>
+        <Button onclick="createChildWindow(true)">Create Child Window with true as permission</Button>
+    </div>
+    <div>
+        <Button onclick="createChildWindow(false)">Create Child Window with false as permission </Button>
+    </div>
+    <div>
+        <Button onclick="createChildApp(true)">Create Child App with true as permission</Button>
+    </div>
+    <div>
+        <Button onclick="createChildApp(false)">Create Child App with false as permission</Button>
     </div>
 </body>
 </html>

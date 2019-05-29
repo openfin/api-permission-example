@@ -5,13 +5,19 @@
         "uuid": "API permissions",
         "url": "http://localhost:8080/index.html",
         "autoShow": true,
-        "contentNavigation": {
+        "permissions": {
+            "System": {
+                "getCookies": false,
+                "launchExternalProcess": true
+            }
+        },
+        "contentNavigationx": {
             "whitelist": [ "https://www.apple.com/", "http://localhost:8080/*"],
             "blacklist": [ "https://www.facebook.com", "https://cnn.com"]
           }  
     },
     "runtime": {
         "arguments": "--v=1 --force-device-scale-factor=1 --enable-strict-api-permissions --inspect",
-        "version": "9.61.36.36"
+        "version": "canary"
     }
 }
